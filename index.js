@@ -14,6 +14,10 @@ app.set('view engine', 'ejs')
 
 app.use(bodyparser.urlencoded({ extended: true }))
 
+app.get('/',(req,res)=>{
+    res.send("Welcome to Anime-api"+"Use '/animes' endpoint to fetch collection")
+})
+
 // request methods for rest api (all animes)
 
 app.route('/animes')
